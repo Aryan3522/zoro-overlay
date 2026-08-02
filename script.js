@@ -1,7 +1,8 @@
 console.log("Overlay Loaded - Real-Time Architecture");
 
 // Initialize Socket.IO connection
-const socket = io("http://localhost:3000");
+// const socket = io("http://localhost:3000");
+const socket = io("https://zoro-overlay.vercel.app");
 
 socket.on("connect", () => {
     console.log("[Socket.IO] Connected to backend:", socket.id);
