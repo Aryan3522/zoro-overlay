@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zoro Stream Overlay</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="overlay">
+
+        <!-- ========================= -->
+        <!-- CAMERA -->
+        <!-- ========================= -->
+
+        <section id="camera-section">
+
+            <div id="camera-frame">
+
+                <video autoplay muted loop playsinline id="camera-video">
+
+                    <source src="assets/videos/webcam.mp4" type="video/mp4">
+
+                </video>
+
+                <div class="frame-border"></div>
+
+                <div class="corner tl"></div>
+                <div class="corner tr"></div>
+                <div class="corner bl"></div>
+                <div class="corner br"></div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- HUD -->
+        <!-- ========================= -->
+
+        <section id="hud">
+
+            <div class="top-stats">
+
+                <div class="mini-card">
+
+                    <span class="mini-icon">👍</span>
+
+                    <span id="likes" class="mini-value">
+                        -
+                    </span>
+
+                </div>
+
+                <div class="mini-card latest-card">
+
+                    <span class="mini-icon">❤️</span>
+
+                    <span id="latestSubMini">
+                        -
+                    </span>
+
+                </div>
+
+                <div class="mini-card">
+
+                    <span class="mini-icon">👤</span>
+
+                    <span id="subs" class="mini-value">
+                        -
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="goal-card">
+
+                <div class="goal-title">
+                    🎯
+                </div>
+
+                <div class="goal-progress">
+
+                    <span id="goalSubs">
+                        👤 - / -
+                    </span>
+
+                    <span id="goalLikes">
+                        👍 - / -
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="giveaway-section">
+
+            <div class="giveaway-card">
+
+                <div class="giveaway-header">
+
+                    <div class="giveaway-title">
+                        🎁 500 SUB GIVEAWAY
+                    </div>
+
+                    <div class="giveaway-count">
+                        <span id="currentSubs">-</span>
+                        <span class="divider">/</span>
+                        <span id="targetSubs">-</span>
+                    </div>
+
+                </div>
+
+                <div class="progress">
+
+                    <div id="giveawayFill"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
